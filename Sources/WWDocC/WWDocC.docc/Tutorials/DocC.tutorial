@@ -1,0 +1,126 @@
+@Tutorial(time: 5) {
+    @Intro(title: "DocC Tutorial") {
+		
+		@Image(source: docc-article.png, alt: "")
+    }
+	
+	@Section(title: "Home Page") {
+		@ContentAndMedia(layout: horizontal) {
+			
+		}
+		
+		@Steps {
+			@Step {
+				The title of the homepage is the project name.
+				
+				@Code(name: SlothCreator.md, file: docc-homepage-title.swift) {
+					@Image(source: docc-homepage-title.png, alt: "")
+				}
+			}
+			
+			@Step {
+				The text in `[]` is a description of the picture, used to provide voice prompts to the visually impaired
+				
+				@Code(name: SlothCreator.md, file: docc-homepage-image.swift) {
+					@Image(source: docc-homepage-image.png, alt: "")
+				}
+			}
+			
+			@Step {
+				The content in `Topics` is used to reorganize the document structure.
+				
+				@Code(name: SlothCreator.md, file: docc-homepage-topics.swift) {
+					@Image(source: docc-homepage-topics.png, alt: "")
+				}
+			}
+		}
+	}
+	
+	@Section(title: "Article") {
+		@ContentAndMedia(layout: horizontal) {
+			
+		}
+		
+		@Steps {
+			@Step {
+				There are no special restrictions on the title of article.
+				
+				@Code(name: GettingStarted.md, file: docc-article-title.swift) {
+					@Image(source: docc-article-title.png, alt: "")
+				}
+			}
+			
+			@Step {
+                To create a code listing, add three backticks (```). Then, add the name of the programming language in lowercase text. Add one or more lines of code, and terminate the code listing by another three backticks.
+				
+				@Code(name: GettingStarted.md, file: docc-article-code.swift) {
+					@Image(source: docc-article-code.png, alt: "")
+				}
+			}
+		}
+	}
+	
+	@Section(title: "Tutorial Table of Contents") {
+		@ContentAndMedia(layout: horizontal) {
+			
+		}
+		
+		@Steps {
+			@Step {
+                `@Intro` is followed by the title, an introduction to all tutorials, and a cover image.
+				
+				@Code(name: SlothCreator.tutorial, file: docc-contents-intro.swift) {
+					@Image(source: docc-contents-intro.png, alt: "")
+				}
+			}
+			
+			@Step {
+                A `@Tutorials` contains an `@Intro` and multiple `@Chapter`, and a `@Chapter` can contain multiple `@TutorialReference`.
+				
+				@Code(name: SlothCreator.tutorial, file: docc-contents-chapter.swift) {
+					@Image(source: docc-contents-chapter.png, alt: "")
+				}
+			}
+		}
+	}
+	
+	@Section(title: "Tutorial") {
+		@ContentAndMedia(layout: horizontal) {
+			
+		}
+		
+		@Steps {
+			@Step {
+                The format of the tutorial's `@Intro` is the same as that of the table of contents.
+				
+				@Code(name: CreatingCustomSloths.tutorial, file: docc-tutorial-intro.swift) {
+					@Image(source: docc-tutorial-intro.png, alt: "")
+				}
+			}
+			
+			@Step {
+                A `@Tutorial` contains an `@Intro` and multiple `@Section`. A `@Section` can only contain one `@Steps`. Below the `steps` is the smallest `@Step`.
+				
+				@Code(name: CreatingCustomSloths.tutorial, file: docc-tutorial-section.swift) {
+					@Image(source: docc-tutorial-section.png, alt: "")
+				}
+			}
+			
+			@Step {
+                `@Step` can consist of a picture and a description.
+				
+				@Code(name: CreatingCustomSloths.tutorial, file: docc-tutorial-imageStep.swift) {
+					@Image(source: docc-tutorial-imageStep.png, alt: "")
+				}
+			}
+			
+			@Step {
+                You can also add a piece of code for the `@Step`.
+				
+				@Code(name: CreatingCustomSloths.tutorial, file: docc-tutorial-codeStep.swift) {
+					@Image(source: docc-tutorial-codeStep.png, alt: "")
+				}
+			}
+		}
+	}
+}

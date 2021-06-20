@@ -1,0 +1,13 @@
+@Tutorials(name: "WWDocC") {
+	
+    @Intro(title: "WWDocC Tutorial") {
+		
+    }
+    
+    @Chapter(name: "Chapter1") {
+        
+        @Image(source: wwdc21.jpg, alt: "")
+        
+        @TutorialReference(tutorial: "doc:DocC")
+    }
+}
