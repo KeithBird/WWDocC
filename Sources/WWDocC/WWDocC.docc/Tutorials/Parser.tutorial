@@ -1,0 +1,69 @@
+@Tutorial(time: 10) {
+    @Intro(title: "Parser Tutorial") {
+        
+        @Image(source: docc-article.png, alt: "")
+    }
+    
+    @Section(title: "Parser") {
+        @ContentAndMedia() { }
+        
+        @Steps {
+            @Step {
+                不同于对解析器的可变状态进行管理，解析器组合算子使用纯函数来避免可变状态
+                
+                @Code(name: Parser.swift, file: parser-step1-Parser.swift) 
+            }
+            @Step {
+                通过构建方法生成一个能够对字符进行条件匹配的解析器
+                
+                直接操作字符串的性能其实会很差。通过 `Substring` 操作会使性能得到大幅提升
+                
+                @Code(name: Builder.swift, file: parser-step2-Builder.swift) 
+            }
+            @Step {
+                通过 `run` 方法测试解析器
+                
+                @Code(name: Func.swift, file: parser-step3-Func.swift) 
+            }
+            @Step {
+                检查某个字符是不是十进制数字
+                
+                @Code(name: Instances.swift, file: parser-step4-Instances.swift) 
+            }
+            @Step {
+                为了解析一个整数而不只是一个单独的数字，我们需要生成一个能够多次执行，并将解析结果合并返回的解析器
+                
+                @Code(name: Modifier.swift, file: parser-step5-Modifier.swift) 
+            }
+            @Step {
+                将字符数组转换为一个整数，也就是对解析出来的结果进行运算
+                
+                函子：对被包装的值进行操作
+                
+                @Code(name: Func.swift, file: parser-step6-Func.swift) 
+            }
+            @Step {
+                通过组合算子组装两个解析器，并将结果合并成一个（深层）元组
+                
+                @Code(name: Func.swift, file: parser-step7-Func.swift) 
+            }
+            @Step {
+                Curry：将多参函数的参数依次传入
+                
+                @Code(name: Func.swift, file: parser-step8-Func.swift) 
+            }
+            @Step {
+                与其将所有结果包裹在嵌套元组里然后计算，不如将结果包装在 curry 函数中进行传递
+                
+                @Code(name: Main.swift, file: parser-step9-Func.swift) 
+            }
+            @Step {
+                重载操作符
+                
+                将 curry 放前面，有利于解析器进行类型推倒
+                
+                @Code(name: Operator.swift, file: parser-step10-Operator.swift) 
+            }
+        }
+    }
+}

@@ -10,4 +10,11 @@
         
         @TutorialReference(tutorial: "doc:DocC")
     }
+    
+    @Chapter(name: "Chapter2") {
+        
+        @Image(source: wwdc21.jpg, alt: "")
+        
+        @TutorialReference(tutorial: "doc:Parser")
+    }
 }

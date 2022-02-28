@@ -5,9 +5,7 @@
     }
 	
 	@Section(title: "Home Page") {
-		@ContentAndMedia(layout: horizontal) {
-			
-		}
+		@ContentAndMedia() { }
 		
 		@Steps {
 			@Step {
@@ -37,9 +35,7 @@
 	}
 	
 	@Section(title: "Article") {
-		@ContentAndMedia(layout: horizontal) {
-			
-		}
+        @ContentAndMedia() { }
 		
 		@Steps {
 			@Step {
@@ -61,9 +57,7 @@
 	}
 	
 	@Section(title: "Tutorial Table of Contents") {
-		@ContentAndMedia(layout: horizontal) {
-			
-		}
+        @ContentAndMedia() { }
 		
 		@Steps {
 			@Step {
@@ -85,9 +79,7 @@
 	}
 	
 	@Section(title: "Tutorial") {
-		@ContentAndMedia(layout: horizontal) {
-			
-		}
+        @ContentAndMedia() { }
 		
 		@Steps {
 			@Step {

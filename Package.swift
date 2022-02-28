@@ -20,7 +20,6 @@ let package = Package(
         .target(
             name: "WWDocC",
             resources: [
-                .process("Resources/")
             ]
         )
     ]
