@@ -9,6 +9,7 @@ extension CharacterSet {
 extension Parser where Result == Character {
     /// A `Parser<Char>` that parse a decimal digits
     static let digit: Parser<Character> = .char(
+        // (Character) -> Bool
         matching: CharacterSet.decimalDigits.contains
     )
 }
